@@ -70,7 +70,7 @@ def display_videos(video_data):
                 st.session_state["selected_video_url"] = video['video_url']
                 st.session_state["selected_thumbnail_url"] = video['thumbnail_url']
                 st.session_state["page"] = "recommendations"
-                st.experimental_rerun()  # Force rerun to apply state changes immediately
+                st.rerun()  # Force rerun to apply state changes immediately
 
 def display_recommendations(recommendations):
     """Displays the original video and recommended videos on a new page, with nested recommend options."""
@@ -88,7 +88,7 @@ def display_recommendations(recommendations):
                 st.session_state["selected_filename"] = rec['filename']
                 st.session_state["selected_video_url"] = rec['video_url']
                 st.session_state["selected_thumbnail_url"] = rec['thumbnail_url']
-                st.experimental_rerun()
+                st.rerun()
 
 # Streamlit App Layout
 st.set_page_config(page_title="Twelve Labs Video Recommendations", layout="centered")
