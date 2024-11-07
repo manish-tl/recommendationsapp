@@ -1,0 +1,7 @@
+streamlit
+pinecone
+pandas
+PIL
+io
+numpy
+twelvelabs
